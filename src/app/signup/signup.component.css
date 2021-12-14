@@ -1,0 +1,23 @@
+.row {
+    background-position: center;
+    background-size: cover;
+}
+
+form {
+    margin: 7%;
+}
+
+input {
+    width: 100%;
+    height: 8vh;
+    background-color: #B7D1D0;
+    border: 2px solid #B7D1D0;
+    margin-bottom: 50px;
+    border-radius: 20px;
+}
+
+button {
+    width: 120px;
+    border-radius: 20px;
+    background-color: #268B6A;
+}
