@@ -1,0 +1,57 @@
+body {
+    background-image: url(https://github.com/MosesOpiyo/hood_watch_frontend/blob/master/src/assets/images/pexels-francesco-ungaro-4322027.jpg?raw=true);
+    background-position: center;
+    background-size: cover;
+}
+
+nav {
+    background-color: transparent;
+}
+
+.navbar-toogle-icon {
+    color: white;
+}
+
+.wording {
+    height: 40vh;
+}
+
+.container-fluid a {
+    color: white;
+}
+
+h2 {
+    color: white;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: white;
+}
+
+.nav-tablist {
+    width: 40%;
+    margin-left: 20%;
+    padding-top: 50px;
+}
+
+.nav-tablist ul li a {
+    color: white;
+    font-size: large;
+    padding-right: 50px;
+}
+
+.card {
+    width: 90%;
+    border-radius: 40px;
+    margin-left: 50px;
+    background-color: #001513;
+}
+
+.card h5 {
+    color: white;
+}
+
+.card p {
+    color: white;
+}
