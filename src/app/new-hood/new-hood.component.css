@@ -2,6 +2,7 @@ body {
     background-image: url(https://github.com/MosesOpiyo/hood_watch_frontend/blob/master/src/assets/images/pexels-francesco-ungaro-4322027.jpg?raw=true);
     background-position: center;
     background-size: cover;
+    height: auto;
 }
 
 nav {
@@ -19,6 +20,7 @@ a {
 
 .card {
     width: 70%;
+    height: auto;
     margin-left: 14%;
     background-color: #001513;
     border-radius: 40px;
