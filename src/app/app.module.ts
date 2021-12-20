@@ -8,6 +8,7 @@ import { LoginComponent } from './login/login.component';
 import { HoodsComponent } from './hoods/hoods.component';
 import { HoodComponent } from './hood/hood.component';
 import { ProfileComponent } from './profile/profile.component';
+import { NewHoodComponent } from './new-hood/new-hood.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { ProfileComponent } from './profile/profile.component';
     LoginComponent,
     HoodsComponent,
     HoodComponent,
-    ProfileComponent
+    ProfileComponent,
+    NewHoodComponent
   ],
   imports: [
     BrowserModule,

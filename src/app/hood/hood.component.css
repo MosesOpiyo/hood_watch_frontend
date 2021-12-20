@@ -1,7 +1,13 @@
+* {
+    margin: 0;
+    padding: 0%;
+}
+
 body {
     background-image: url(https://github.com/MosesOpiyo/hood_watch_frontend/blob/master/src/assets/images/pexels-francesco-ungaro-4322027.jpg?raw=true);
     background-position: center;
     background-size: cover;
+    height: auto;
 }
 
 nav {
@@ -29,20 +35,15 @@ nav ul li a {
     color: white;
 }
 
-.nav-tablist {
-    width: 40%;
-    margin-left: 20%;
-    padding-top: 50px;
-}
-
-.nav-tablist ul li a {
+ul li a {
     color: white;
     font-size: large;
     padding-right: 50px;
 }
 
 .card {
-    width: 90%;
+    width: 95%;
+    height: auto;
     border-radius: 40px;
     margin-left: 50px;
     background-color: #001513;
@@ -54,4 +55,21 @@ nav ul li a {
 
 .card p {
     color: white;
+}
+
+.reports {
+    width: 90%;
+    height: auto;
+}
+
+.businesses {
+    width: 100%;
+    height: auto;
+    background-color: #268B6A;
+    border-radius: 20px;
+}
+
+.residents {
+    width: 100%;
+    height: auto;
 }

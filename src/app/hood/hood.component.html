@@ -46,42 +46,97 @@
     </section>
     <section style="background-color: #527072;border-radius: 40px;">
         <div class="hoods">
-            <div class="nav-tablist">
-                <ul class="nav nav-tab mb-3 mt-3 d-flex" id="pills-tab" role="tablist">
-                    <li class="nav-item">
-                        <a class="nav-link active" id="pills-home-tab" data-bs-toggle="pill" data-bs-target="#pills-home" type="button" role="tab" aria-controls="pills-home" aria-selected="true">Occurences</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link active" id="pills-home-tab" data-bs-toggle="pill" data-bs-target="#pills-home" type="button" role="tab" aria-controls="pills-home" aria-selected="true">Businesses</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link active" id="pills-home-tab" data-bs-toggle="pill" data-bs-target="#pills-home" type="button" role="tab" aria-controls="pills-home" aria-selected="true">Residents</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link active" id="pills-home-tab" data-bs-toggle="pill" data-bs-target="#pills-home" type="button" role="tab" aria-controls="pills-home" aria-selected="true">Hotlines</a>
-                    </li>
-                </ul>
-            </div>
-            <div class="hoods py-5">
-                <div class="card g-0">
-                    <div class="card-body">
-                        <h5 class="card-title" style="margin-left: 20px;">Special title treatment</h5>
-                        <p class="card-text" style="margin-left: 20px;">With supporting text below as a natural lead-in to additional content.</p>
-                        <a href="#" class="btn btn-primary" style="margin-left: 20px;">Go somewhere</a>
+            <ul class="nav justify-content-center" style="margin-bottom: 20px;">
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="#">Active</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Link</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Link</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Link</a>
+                </li>
+
+            </ul>
+            <div class="tab-content">
+                <div role="tabpanel" class="tab-pane active" id="occurence">
+                    <div class="card g-0">
+                        <div class="card-body">
+                            <div class="row g-0">
+                                <div class="col-lg-5">
+                                    <h2 class="card-title" style="margin-left: 20px;align-items: center;">Occurences</h2>
+                                </div>
+                                <div class="col-lg-5">
+                                    <a href="#" class="btn btn-success" style="margin-left: 20px;">Report</a>
+                                </div>
+                                <br>
+                                <div class="reports" style="margin-top: 30px;">
+                                    <h5 style="margin-left: 23px;padding-bottom: 30px;">User 1:reports za kishenzi</h5>
+                                    <h5 style="margin-left: 23px;padding-bottom: 30px;">User 1:reports za kishenzi</h5>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
-            </div>
-            <div class="tab-content py-5" id="pills-tabContent">
-                <div class="card g-0">
-                    <div class="card-body">
-                        <h5 class="card-title" style="margin-left: 20px;">Special title treatment</h5>
-                        <p class="card-text" style="margin-left: 20px;">With supporting text below as a natural lead-in to additional content.</p>
-                        <a href="#" class="btn btn-primary" style="margin-left: 20px;">Go somewhere</a>
+                <div role="tabpanel" class="tab-pane fade" id="business">
+                    <div class="card g-0">
+                        <div class="card-body">
+                            <div class="row g-0">
+                                <div class="col-lg-5">
+                                    <h2 class="card-title" style="margin-left: 20px;align-items: center;">Businesses</h2>
+                                </div>
+                                <div class="col-lg-5">
+                                    <a href="#" class="btn btn-success" style="margin-left: 20px;">Add business</a>
+                                </div>
+                                <br>
+                                <div class="businesses" style="margin-top: 30px;">
+                                    <h5 style="margin-left: 23px;padding-bottom: 20px;padding-top: 20px;">business name</h5>
+                                    <h5 style="margin-left: 23px;padding-bottom: 20px;">business owner</h5>
+                                    <h5 style="margin-left: 23px;padding-bottom: 20px;">business services</h5>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
+                <div role="tabpanel" class="tab-pane fade" id="residents">
+                    <div class="card g-0">
+                        <div class="card-body">
+                            <div class="row g-0">
+                                <div class="col-lg-5">
+                                    <h2 class="card-title" style="margin-left: 20px;align-items: center;">Residents</h2>
+                                </div>
+                                <br>
+                                <div class="Residents" style="margin-top: 30px;">
+                                    <h5 style="margin-left: 23px;padding-bottom: 5px;padding-top: 10px;">name</h5>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div role="tabpanel" class="tab-pane fade" id="hotlines">
+                    <div class="card g-0">
+                        <div class="card-body">
+                            <div class="row g-0">
+                                <div class="col-lg-5">
+                                    <h2 class="card-title" style="margin-left: 20px;align-items: center;">hotlines</h2>
+                                </div>
+                                <br>
+                                <div class="Residents" style="margin-top: 30px;">
+                                    <h5 style="margin-left: 23px;padding-bottom: 5px;padding-top: 10px;">police hotline</h5>
+                                    <h5 style="margin-left: 23px;padding-bottom: 5px;padding-top: 10px;">emergency hotline</h5>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
             </div>
         </div>
-
     </section>
 
 
