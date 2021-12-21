@@ -17,16 +17,16 @@
         <div class="container-fluid">
             <a class="navbar-brand" href="#">Hood</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
+            <span class="navbar-toggler-icon"></span>
+          </button>
             <div class="collapse navbar-collapse" id="navmenu">
                 <ul class="navbar-nav">
                     <li class="nav-item">
                         <a class="nav-link active" aria-current="page" href="#">Profile</a>
                     </li>
                     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navmenu">
-                            <span class="navbar-toogle-icon"></span>
-                        </button>
+                        <span class="navbar-toogle-icon"></span>
+                    </button>
                     <li class="nav-item">
                         <a class="nav-link disabled">Settings</a>
                     </li>
@@ -40,7 +40,7 @@
     <section>
         <div class="wording">
             <div>
-                <h2 class="clo-lg-5 text-bottom py-5" style="margin-top: 8%;padding-left:40px;color: white;">Occurences in your Hood</h2>
+                <h2 class="clo-lg-5 text-bottom py-5" style="margin-top: 8%;padding-left:40px;color: white;">Businesses in your hood</h2>
             </div>
         </div>
     </section>
@@ -62,28 +62,45 @@
 
             </ul>
 
-            <div role="tabpanel" class="tab-pane" id="occurence">
+
+            <div role="tabpanel" class="tab-pane" id="business">
                 <div class="card g-0">
                     <div class="card-body">
                         <div class="row g-0">
                             <div class="col-lg-5">
-                                <h2 class="card-title" style="margin-left: 20px;align-items: center;">Occurences</h2>
+                                <h2 class="card-title" style="margin-left: 20px;align-items: center;">Businesses</h2>
                             </div>
                             <div class="col-lg-5">
-                                <a href="#" class="btn btn-success" style="margin-left: 20px;">Report</a>
+                                <a href="#" class="btn btn-success" style="margin-left: 20px;">Add business</a>
+                            </div>
+                            <div class="row g-0">
+                                <form class="d-flex">
+                                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                                    <button class="btn btn-outline-success" type="submit">Search</button>
+                                </form>
+
                             </div>
                             <br>
-                            <div class="reports" style="margin-top: 30px;">
-                                <h5 style="margin-left: 23px;padding-bottom: 30px;">User 1:reports za kishenzi</h5>
-                                <h5 style="margin-left: 23px;padding-bottom: 30px;">User 1:reports za kishenzi</h5>
+                            <div class="businesses" style="margin-top: 30px;">
+                                <h5 style="margin-left: 23px;padding-bottom: 20px;padding-top: 20px;">business name</h5>
+                                <h5 style="margin-left: 23px;padding-bottom: 20px;">business owner</h5>
+                                <h5 style="margin-left: 23px;padding-bottom: 20px;">business services</h5>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
 
+
+
         </div>
     </section>
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+
+
 </body>
 
 </html>

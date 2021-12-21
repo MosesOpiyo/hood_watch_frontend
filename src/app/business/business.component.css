@@ -57,9 +57,11 @@ ul li a {
     color: white;
 }
 
-.reports {
-    width: 90%;
+.businesses {
+    width: 100%;
     height: auto;
+    background-color: #268B6A;
+    border-radius: 20px;
 }
 
 form {
