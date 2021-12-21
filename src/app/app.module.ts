@@ -13,8 +13,9 @@ import { ProfileComponent } from './profile/profile.component';
 import { NewHoodComponent } from './new-hood/new-hood.component';
 import { FormsModule } from '@angular/forms';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { OccurenceComponent } from './occurence/occurence.component';
+
 import { BusinessComponent } from './business/business.component';
+import { ResidentsComponent } from './residents/residents.component';
 
 @NgModule({
   declarations: [
@@ -25,8 +26,8 @@ import { BusinessComponent } from './business/business.component';
     HoodComponent,
     ProfileComponent,
     NewHoodComponent,
-    OccurenceComponent,
-    BusinessComponent
+    BusinessComponent,
+    ResidentsComponent
   ],
   imports: [
     BrowserModule,
