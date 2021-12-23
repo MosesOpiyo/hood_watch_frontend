@@ -1,7 +1,8 @@
 import { HttpClient,HttpHeaders } from '@angular/common/http';
 import { Router } from '@angular/router';
 import { Injectable } from '@angular/core';
-import { MatSnackBar } from '@angular/material/snack-bar';
+
+
 
 import { AuthService } from './auth.service';
 import { environment } from 'src/environments/environment';
@@ -12,8 +13,10 @@ import { User } from './user';
   providedIn: 'root'
 })
 export class AccountService {
+  
 
-  constructor(private http:HttpClient, private route:Router,private authService:AuthService, private snackBar:MatSnackBar) { }
+  constructor(private http:HttpClient, private route:Router,private authService:AuthService) { }
+    
 
   getProfile(){
     let headers = new HttpHeaders({
@@ -42,27 +45,29 @@ export class AccountService {
       'Authorization':`Token ${sessionStorage.getItem('token')}`
     })
     this.http.post(`${environment.BASE_URL}/hood/move_out/`,1,{"headers":headers}).subscribe(response => {
-      this.snackBar.open("You are now no longer a member of the neighbourhood","See you",{duration:1000})
+      alert("you are no longer a member of this hood")
     })
   }
 
   login(credentials:any){
-    this.http.post(`${environment.BASE_URL}/login`,credentials).subscribe(response=>{
-      // sessionStorage.setItem('token',response['token'])
+    this.http.post(`${environment.BASE_URL}/users/login`,credentials).subscribe((res:any)=>{
+      sessionStorage.setItem('token', res['token'])
       this.authService.authentication(true)
-      this.snackBar.open(`Welcome back ${credentials.get('username')}`)
-      this.route.navigate(['myhood'])
+      alert(`Welcome back`)
+      this.route.navigate(['hoods'])
     },error=>{
-      this.snackBar.open(`There was a problem logging you in, please check your credentials and try again.`,"Please",{duration:1000})
+      alert('There was a problem logging you in, please check your credentials and try again.')
+      console.log(error)
     })
   }
 
   register(credentials:any){
-    this.http.post(`${environment.BASE_URL}/register`,credentials).subscribe(response=>{
-      this.snackBar.open(`Congratulations ${credentials.get('username')}, your account was successfully created.`,"Log in",{duration:3000})
+    this.http.post(`${environment.BASE_URL}/users/register`,credentials).subscribe(response=>{
+      alert(`Congratulations ${credentials.get('username')}, your account was successfully created.`)
       this.route.navigate([''])
     },error => {
-      this.snackBar.open("Im sorry, there was a problem created the account.")
+      alert("Im sorry, there was a problem created the account.")
+      console.log(error)
     })
   }
 
@@ -103,22 +108,25 @@ export class AccountService {
       'Authorization':`Token ${sessionStorage.getItem('token')}`
       })
      this.http.post(`${environment.BASE_URL}/hood/business/`,body,{"headers":headers}).subscribe(response => {
-       this.snackBar.open("Congratulations, the business was registered successfully!","Thank you",{duration:3000})
+       alert("Congratulations, the business was registered successfully!")
      },error => {
-      this.snackBar.open("There was a problem registering your business","Sorry",{duration:3000})
+      alert("There was a problem registering your business")
      })
   }
 
   createHood(hood:any){
+    for (var pair of hood.entries()) {
+      console.log(pair[0]+ ', ' + pair[1]); 
+  }
     let headers = new HttpHeaders({
     'Authorization':`Token ${sessionStorage.getItem('token')}`
     })
-   this.http.post(`${environment.BASE_URL}/hood/`,hood,{"headers":headers}).subscribe(response => {
-     this.snackBar.open("Congratulations, the neighbourhood was created successfully!","Thank you",{duration:3000})
-     this.route.navigate(['myhood'])
+   this.http.post(`${environment.BASE_URL}/hood/hoods`,hood,{"headers":headers}).subscribe(response => {
+     alert("Congratulations, the neighbourhood was created successfully!")
    },error => {
-    this.snackBar.open("There was a problem creating a neighbourhood for you, please move out to create a new one!","Thank you",{duration:3000})
-    this.route.navigate(['myhood'])
+    alert("There was a problem creating a neighbourhood for you")
+    console.log(error)
+    
    })
   }
 

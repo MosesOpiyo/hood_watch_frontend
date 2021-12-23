@@ -53,14 +53,14 @@
                     <div class="card-body">
                         <div class="row">
                             <div class="col-lg-5">
-                                <form action="">
-                                    <input type="text" placeholder="Hood name">
+                                <form #newHoodForm="ngForm" (ngSubmit)="createHood()">
+                                    <input type="text" name="name" [(ngModel)]="new_hood.name" placeholder="Hood name">
                                     <br>
-                                    <input type="text" placeholder="Location">
+                                    <input type="text" name="location" [(ngModel)]="new_hood.location" placeholder="Location">
                                     <br>
-                                    <input type="text" placeholder="police hotline">
+                                    <input type="text" name="police_hotline" [(ngModel)]="new_hood.police_hotline" placeholder="police hotline">
                                     <br>
-                                    <input type="text" placeholder="emergency hotline">
+                                    <input type="text" name="emergency_hotline" [(ngModel)]="new_hood.emergency_hotline" placeholder="emergency hotline">
                                     <br>
                                     <button type="submit" class="btn btn-success">Add</button>
                                 </form>

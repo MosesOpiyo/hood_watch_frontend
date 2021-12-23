@@ -32,10 +32,10 @@
         <div class="row g-0">
             <div class="col-lg-5">
                 <h2 class="clo-lg-5 text-center py-5">Login</h2>
-                <form action="">
-                    <input type="text" placeholder="Email">
+                <form #loginForm="ngForm" (ngSubmit)="loginUser()">
+                    <input id="email" name="email" placeholder="email" [(ngModel)]="email" class="form-control form-control" type="email" required>
                     <br>
-                    <input type="" placeholder="Password">
+                    <input input id="password" name="password" [(ngModel)]="password" placeholder="enter your password" class="form-control" type="password" required>
                     <br>
                     <button class="btn btn-succes" type="submit">Login</button>
                     <p class="clo-lg-5 text-center py-5">Dont have an account?<br><a routerLink="signup">Sign up</a></p>
