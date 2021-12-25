@@ -18,6 +18,7 @@ import { BusinessComponent } from './business/business.component';
 import { ResidentsComponent } from './residents/residents.component';
 import { HotlinesComponent } from './hotlines/hotlines.component';
 import { NewBusinessComponent } from './new-business/new-business.component';
+import { NavbarComponent } from './navbar/navbar.component';
 
 @NgModule({
   declarations: [
@@ -31,7 +32,8 @@ import { NewBusinessComponent } from './new-business/new-business.component';
     BusinessComponent,
     ResidentsComponent,
     HotlinesComponent,
-    NewBusinessComponent
+    NewBusinessComponent,
+    NavbarComponent
   ],
   imports: [
     BrowserModule,
