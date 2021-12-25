@@ -6,6 +6,12 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./business.component.css']
 })
 export class BusinessComponent implements OnInit {
+  hood:any;
+  businesses:any
+
+  postBusiness(){
+    
+  }
 
   constructor() { }
 

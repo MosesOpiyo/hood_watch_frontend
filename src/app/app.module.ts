@@ -17,6 +17,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { BusinessComponent } from './business/business.component';
 import { ResidentsComponent } from './residents/residents.component';
 import { HotlinesComponent } from './hotlines/hotlines.component';
+import { NewBusinessComponent } from './new-business/new-business.component';
 
 @NgModule({
   declarations: [
@@ -29,7 +30,8 @@ import { HotlinesComponent } from './hotlines/hotlines.component';
     NewHoodComponent,
     BusinessComponent,
     ResidentsComponent,
-    HotlinesComponent
+    HotlinesComponent,
+    NewBusinessComponent
   ],
   imports: [
     BrowserModule,

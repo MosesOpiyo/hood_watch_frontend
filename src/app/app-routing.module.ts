@@ -7,6 +7,8 @@ import { HoodsComponent } from './hoods/hoods.component';
 import { HoodComponent } from './hood/hood.component';
 import { NewHoodComponent } from './new-hood/new-hood.component';
 import { ProfileComponent } from './profile/profile.component';
+import { BusinessComponent } from './business/business.component';
+import { NewBusinessComponent } from './new-business/new-business.component';
 
 const routes: Routes = [
   {path:'',component:LoginComponent},
@@ -14,6 +16,8 @@ const routes: Routes = [
   {path:'hoods',component:HoodsComponent},
   {path:'hood',component:HoodComponent},
   {path:'new-hood',component:NewHoodComponent},
+  {path:'businesses',component:BusinessComponent},
+  {path:'new-business',component:NewBusinessComponent},
   {path:'profile',component:ProfileComponent}
 ];
 
