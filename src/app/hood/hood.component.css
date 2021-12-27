@@ -78,10 +78,3 @@ form {
     width: 100%;
     height: auto;
 }
-
-input {
-    margin-bottom: 20px;
-    width: 20%;
-    height: 40px;
-    border-radius: 10px;
-}

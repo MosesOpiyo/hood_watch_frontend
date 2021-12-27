@@ -30,12 +30,7 @@ export class HoodComponent implements OnInit {
       console.log(this.hood)
     })
   
-    this.accountservice.getOccurence(this.hood.id).subscribe((response:any) =>{
-      this.occurences = response['occurences']
-      console.log(this.occurences)      
-    },error =>{
-      console.log(error)
-    })
+    
   }
 
 }

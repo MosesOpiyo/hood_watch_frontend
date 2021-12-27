@@ -13,7 +13,7 @@ export class NewHoodComponent implements OnInit {
   createHood(){
     let form = new FormData()
     form.append("name",this.new_hood.name)
-    form.append("location",this.new_hood.name)
+    form.append("location",this.new_hood.location)
     form.append("police_line",this.new_hood.police_hotline)
     form.append("emergency_line",this.new_hood.emergency_hotline)
     this.accountService.createHood(form)

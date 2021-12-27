@@ -54,7 +54,7 @@ export class AccountService {
       sessionStorage.setItem('token', res['token'])
       this.authService.authentication(true)
       alert(`Welcome back`)
-      this.route.navigate(['hoods'])
+      this.route.navigate(['hood'])
     },error=>{
       alert('There was a problem logging you in, please check your credentials and try again.')
       console.log(error)
@@ -142,7 +142,7 @@ export class AccountService {
     let headers = new HttpHeaders({
       'Authorization':`Token ${sessionStorage.getItem('token')}`
       })
-     return this.http.get(`${environment.BASE_URL}/hood/myhood/${pk}`,{"headers":headers})
+     return this.http.get(`${environment.BASE_URL}/hood/my_hood/${pk}`,{"headers":headers})
   }
 
   searchBusiness(searchTerm:any){
