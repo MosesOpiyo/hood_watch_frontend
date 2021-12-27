@@ -28,7 +28,7 @@ export class AccountService {
     let headers = new HttpHeaders({
       'Authorization':`Token ${sessionStorage.getItem('token')}`
     })
-    return this.http.get(`${environment.BASE_URL}/hood/`,{"headers":headers})
+    return this.http.get(`${environment.BASE_URL}/hood/hoods`,{"headers":headers})
   }
 
   joinHood(id:number){
@@ -125,6 +125,7 @@ export class AccountService {
      alert("Congratulations, the neighbourhood was created successfully!")
    },error => {
     alert("There was a problem creating a neighbourhood for you")
+    alert(error)
     console.log(error)
     
    })

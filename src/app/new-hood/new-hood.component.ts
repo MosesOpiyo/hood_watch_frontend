@@ -16,7 +16,6 @@ export class NewHoodComponent implements OnInit {
     form.append("location",this.new_hood.name)
     form.append("police_line",this.new_hood.police_hotline)
     form.append("emergency_line",this.new_hood.emergency_hotline)
-
     this.accountService.createHood(form)
   }
 

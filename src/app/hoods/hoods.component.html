@@ -13,38 +13,45 @@
 </head>
 
 <body>
-    <app-hood *ngIf="hood"></app-hood>
 
-    <app-navbar></app-navbar>
-    <section>
-        <div class="wording">
-            <div>
-                <h2 class="clo-lg-5 text-bottom py-5" style="margin-top: 8%;padding-left:40px;color: white;">Welcome User. Get connected to your neighbours<br> having every occurence at your fingertips.</h2>
-            </div>
-        </div>
-    </section>
-    <section style="background-color: #527072;border-radius: 40px;">
-        <div class="hoods">
-            <div class="row">
-                <div class="col-lg-5">
-                    <h2 class="clo-lg-5 text-center py-4">Available Hoods</h2>
-                </div>
-                <div class="col-lg-5">
-                    <a class="btn btn-success" style="margin-top: 20px;" routerLink="/new-hood">Add hood</a>
-                </div>
-            </div>
-            <div class="hoods py-5">
-                <div class="card g-0">
-                    <div class="card-body">
-                        <h5 class="card-title" style="margin-left: 22px;">Hood location</h5>
-                        <p class="card-text" style="margin-left: 20px;">hood name</p>
-                        <a href="#" class="btn btn-primary" style="margin-left: 20px;border-radius: 30px;">Join Hood</a>
+
+    <div class="container-fluid">
+        <app-hood *ngIf="hood"></app-hood>
+        <div class="row" *ngIf="!hood">
+            <app-navbar></app-navbar>
+            <section>
+                <div class="wording">
+                    <div>
+                        <h2 class="clo-lg-5 text-bottom py-5" style="margin-top: 8%;padding-left:40px;color: white;">Welcome User. Get connected to your neighbours<br> having every occurence at your fingertips.</h2>
                     </div>
                 </div>
-            </div>
-        </div>
+            </section>
+            <section style="background-color: #527072;border-radius: 40px;">
+                <div class="hoods">
+                    <div class="row">
+                        <div class="col-lg-5">
+                            <h2 class="clo-lg-5 text-center py-4">Available Hoods</h2>
+                        </div>
+                        <div class="col-lg-5">
+                            <a class="btn btn-success" style="margin-top: 20px;" routerLink="/new-hood">Add hood</a>
+                        </div>
+                    </div>
+                    <div class="row" *ngFor="let hood of hoods">
+                        <div class="hoods py-5">
+                            <div class="card g-0">
+                                <div class="card-body">
+                                    <h5 class="card-title" style="margin-left: 22px;">{{hood['location']}}</h5>
+                                    <p class="card-text" style="margin-left: 20px;">{{hood['name']}}</p>
+                                    <button class="btn btn-primary" (click)="joinHood(hood[ 'id'])" style="margin-left: 20px;border-radius: 30px;">Join Hood</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
 
-    </section>
+            </section>
+        </div>
+    </div>
 
 
 

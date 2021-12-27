@@ -4,14 +4,6 @@ body {
     background-size: cover;
 }
 
-nav {
-    background-color: transparent;
-}
-
-.navbar-toogle-icon {
-    color: white;
-}
-
 .wording {
     height: 40vh;
 }
@@ -21,11 +13,6 @@ nav {
 }
 
 h2 {
-    color: white;
-}
-
-nav ul li a {
-    text-decoration: none;
     color: white;
 }
 
