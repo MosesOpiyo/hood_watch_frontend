@@ -19,6 +19,7 @@ import { ResidentsComponent } from './residents/residents.component';
 import { HotlinesComponent } from './hotlines/hotlines.component';
 import { NewBusinessComponent } from './new-business/new-business.component';
 import { NavbarComponent } from './navbar/navbar.component';
+import { OccurenceComponent } from './occurence/occurence.component';
 
 @NgModule({
   declarations: [
@@ -33,7 +34,8 @@ import { NavbarComponent } from './navbar/navbar.component';
     ResidentsComponent,
     HotlinesComponent,
     NewBusinessComponent,
-    NavbarComponent
+    NavbarComponent,
+    OccurenceComponent
   ],
   imports: [
     BrowserModule,

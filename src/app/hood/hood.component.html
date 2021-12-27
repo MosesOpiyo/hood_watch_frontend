@@ -18,7 +18,7 @@
         <section>
             <div class="wording">
                 <div>
-                    <h2 class="clo-lg-5 text-bottom py-5" style="margin-top: 8%;padding-left:40px;color: white;">Your Hood</h2>
+                    <h2 class="clo-lg-5 text-bottom py-5" style="margin-top: 8%;padding-left:40px;color: white;">{{hood['name']}}</h2>
                 </div>
             </div>
         </section>
@@ -56,18 +56,11 @@
                                     <h4 style="margin-left: 23px;padding-bottom: 30px;">Report:reports za kishenzi</h4>
                                     <h4 style="margin-left: 23px;padding-bottom: 30px;">Description:reports za kishenzi</h4>
                                     <h4 style="margin-left: 23px;padding-bottom: 30px;">Reporter:User1</h4>
-
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <div class="report-input" style="margin-left: 3%; margin-top: 20px;">
-                        <input type="text" placeholder="report name">
-                        <br>
-                        <input type="text" placeholder="report description">
-                        <br>
-                        <button class="btn btn-success">Add Report</button>
-                    </div>
+                    <app-occurence [hood]="hood" (formSubmitEvent)="postOccurence($event)"></app-occurence>
                 </div>
 
             </div>

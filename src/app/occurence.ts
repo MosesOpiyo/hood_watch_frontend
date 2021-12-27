@@ -1,3 +1,4 @@
 export class Occurence {
-    constructor(public name:any,description:any){}
+    
+    constructor(public name:any,public description:any){}
 }

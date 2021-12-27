@@ -20,6 +20,8 @@ export class HoodComponent implements OnInit {
   }
 
   constructor(private accountservice:AccountService) { }
+  
+  
 
   ngOnInit(): void {
 
