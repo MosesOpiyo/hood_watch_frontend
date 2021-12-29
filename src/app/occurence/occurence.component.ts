@@ -11,7 +11,7 @@ export class OccurenceComponent implements OnInit {
 
   constructor(private accountService:AccountService) { }
 
-  occurence = new Occurence("","")
+  new_occurence = new Occurence("","")
 
   @Input()
   hood:any;
@@ -21,12 +21,13 @@ export class OccurenceComponent implements OnInit {
   @Output() formSubmitEvent = new EventEmitter<FormData>();
 
   postOccurence(){
-    this.form.append('name',this.occurence.name),
-    this.form.append('description',this.occurence.description)
+    this.form.append('name',this.new_occurence.name),
+    this.form.append('description',this.new_occurence.description)
+
 
     this.formSubmitEvent.emit(this.form)
-    this.occurence.name = ""
-    this.occurence.description = ""
+    this.new_occurence.name = ""
+    
   }
 
   ngOnInit(): void {

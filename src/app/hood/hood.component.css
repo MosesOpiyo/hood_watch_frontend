@@ -49,8 +49,9 @@ ul li a {
     background-color: #001513;
 }
 
-.card h4 {
+.card h3 {
     color: white;
+    font-size: 20px;
 }
 
 .card p {

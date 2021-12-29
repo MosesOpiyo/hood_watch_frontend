@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 import { AccountService } from '../account.service';
 
@@ -9,8 +10,10 @@ import { AccountService } from '../account.service';
 })
 export class HoodsComponent implements OnInit {
   hoods:any
+  hood:any
+
  
-  constructor(private accountservice:AccountService) { }
+  constructor(private accountservice:AccountService,private route:Router) { }
    joinHood(id:number){
     this.accountservice.joinHood(id).subscribe(response =>{
       alert("welcome to the hood")
@@ -24,10 +27,16 @@ export class HoodsComponent implements OnInit {
   ngOnInit(): void {
     this.accountservice.allHoods().subscribe(response => {
       this.hoods = response
-      
     },error =>{
       console.log(error)
     })
+    this.accountservice.getProfile().subscribe((response:any) =>{
+      this.hood = response["hood"]
+      if(this.hood != null){
+        this.route.navigate(['hood'])
+      }
+    })
+
     
     
   }

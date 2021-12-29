@@ -12,6 +12,7 @@ export class LoginComponent implements OnInit {
 
   email: any;
   password: any;
+  profile:any;
 
   loginUser(){
     let form = new FormData();

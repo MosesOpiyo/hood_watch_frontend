@@ -1,9 +1,9 @@
 <p>Have a report,post it below.</p>
 <div class="report-input" style="margin-left: 3%; margin-top: 20px;">
     <form #occurenceForm="ngForm" (ngSubmit)="postOccurence()">
-        <input type="text" [(ngModel)]="occurence.name" placeholder="report name">
+        <input type="text" [(ngModel)]="new_occurence.name" name="name" placeholder="report name">
         <br>
-        <input type="text" [(ngModel)]="occurence.description" placeholder="report description">
+        <input type="text" [(ngModel)]="new_occurence.description" name="description" placeholder="report description">
         <br>
         <button class="btn btn-success">Add Report</button>
     </form>

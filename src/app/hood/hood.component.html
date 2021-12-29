@@ -14,13 +14,14 @@
 </head>
 
 <body>
-    <app-hoods *ngIf="!hood"></app-hoods>
-    <div class="container-fluid" *ngIf="hood">
+
+    <div class="container-fluid">
         <app-navbar></app-navbar>
         <section>
             <div class="wording">
                 <div>
                     <h2 class="clo-lg-5 text-bottom py-5" style="margin-top: 8%;padding-left:40px;color: white;">{{hood['name']}}</h2>
+                    <p style="color: white;margin-left: 40px;">Located in {{hood['location']}} created by {{hood['admin']['username']}}</p>
                 </div>
             </div>
         </section>
@@ -54,10 +55,11 @@
 
                                 </div>
                                 <br>
-                                <div class="reports" style="margin-top: 30px;">
-                                    <h4 style="margin-left: 23px;padding-bottom: 30px;">Report:reports za kishenzi</h4>
-                                    <h4 style="margin-left: 23px;padding-bottom: 30px;">Description:reports za kishenzi</h4>
-                                    <h4 style="margin-left: 23px;padding-bottom: 30px;">Reporter:User1</h4>
+                                <div class="reports" style="background-color:#268B6A;border-radius: 20px; margin-bottom: 30px;" *ngFor="let occurence of occurences">
+                                    <p style="margin-top: 5px;margin-left: 22px;">{{occurence['reporter']['username']}}</p>
+                                    <h3 style="margin-left: 23px;padding-bottom: 20px;margin-top: 10px;">Report: {{occurence['name']}}</h3>
+                                    <h3 style="margin-left: 23px;padding-bottom: 20px;">Description: {{occurence['description']}}</h3>
+                                    <p style="margin-top: 5px;margin-left: 22px;">posted at {{occurence['time_reported']}}</p>
                                 </div>
                             </div>
                         </div>

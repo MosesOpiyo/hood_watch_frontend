@@ -13,7 +13,7 @@ import { User } from './user';
   providedIn: 'root'
 })
 export class AccountService {
-  
+  hood:any
 
   constructor(private http:HttpClient, private route:Router,private authService:AuthService) { }
     
@@ -22,7 +22,7 @@ export class AccountService {
     let headers = new HttpHeaders({
       'Authorization':`Token ${sessionStorage.getItem('token')}`
     })
-    return this.http.get(`${environment.BASE_URL}/hood/my_hood`,{'headers':headers})
+    return this.http.get(`${environment.BASE_URL}/hood/my_hood/`,{'headers':headers})
   }
   allHoods(){
     let headers = new HttpHeaders({
@@ -54,7 +54,7 @@ export class AccountService {
       sessionStorage.setItem('token', res['token'])
       this.authService.authentication(true)
       alert(`Welcome back`)
-      this.route.navigate(['hood'])
+      this.route.navigate(['hoods'])
     },error=>{
       alert('There was a problem logging you in, please check your credentials and try again.')
       console.log(error)
@@ -123,8 +123,9 @@ export class AccountService {
     })
    this.http.post(`${environment.BASE_URL}/hood/hoods`,hood,{"headers":headers}).subscribe(response => {
      alert("Congratulations, the neighbourhood was created successfully!")
+     
    },error => {
-    alert("There was a problem creating a neighbourhood for you")
+    alert("There was a problem creating the neighbourhood")
     alert(error)
     console.log(error)
     
