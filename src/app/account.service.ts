@@ -128,6 +128,7 @@ export class AccountService {
     })
    this.http.post(`${environment.BASE_URL}/hood/hoods`,hood,{"headers":headers}).subscribe(response => {
      alert("Congratulations, the neighbourhood was created successfully!")
+     this.route.navigate(['hoods'])
      
    },error => {
     alert("There was a problem creating the neighbourhood")
