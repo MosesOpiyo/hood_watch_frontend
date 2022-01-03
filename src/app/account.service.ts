@@ -46,6 +46,7 @@ export class AccountService {
     })
     this.http.post(`${environment.BASE_URL}/hood/move_out/`,1,{"headers":headers}).subscribe(response => {
       alert("you are no longer a member of this hood")
+      this.route.navigate(['hoods'])
     })
   }
 
@@ -104,11 +105,15 @@ export class AccountService {
   }
 
   registerBusiness(body:any){
+    for (var pair of body.entries()) {
+      console.log(pair[0]+ ', ' + pair[1]); 
+  }
     let headers = new HttpHeaders({
       'Authorization':`Token ${sessionStorage.getItem('token')}`
       })
      this.http.post(`${environment.BASE_URL}/hood/business/`,body,{"headers":headers}).subscribe(response => {
        alert("Congratulations, the business was registered successfully!")
+       this.route.navigate(['businesses'])
      },error => {
       alert("There was a problem registering your business")
      })

@@ -24,17 +24,18 @@
     <section style="background-color: #527072;border-radius: 40px;">
         <div class="hoods">
             <ul class="nav justify-content-center" style="margin-bottom: 20px;">
+
                 <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="#business">Active</a>
+                    <a class="nav-link active" routerLink="/hood">occurence</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link active" href="#occurence">Link</a>
+                    <a class="nav-link" routerLink="/businesses">Businesses</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Link</a>
+                    <a class="nav-link" routerLink="/residents">Residents</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Link</a>
+                    <a class="nav-link" routerLink="/hotlines">Hotlines</a>
                 </li>
 
             </ul>
@@ -47,8 +48,8 @@
                             </div>
                             <br>
                             <div class="Residents" style="margin-top: 30px;">
-                                <h5 style="margin-left: 23px;padding-bottom: 5px;padding-top: 10px;">police hotline</h5>
-                                <h5 style="margin-left: 23px;padding-bottom: 5px;padding-top: 10px;">emergency hotline</h5>
+                                <h5 style="margin-left: 23px;padding-bottom: 5px;padding-top: 10px;">police: {{hood['police_line']}}</h5>
+                                <h5 style="margin-left: 23px;padding-bottom: 5px;padding-top: 10px;">emergency: {{hood['emergency_line']}}</h5>
 
                             </div>
                         </div>

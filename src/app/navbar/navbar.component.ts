@@ -10,15 +10,22 @@ import { AuthService } from '../auth.service';
 export class NavbarComponent implements OnInit {
   
   isAuthenticated: any;
+  hood:any
 
   constructor(private authService:AuthService, private accountService:AccountService) { }
+
 
   logout(){
     this.accountService.logout()
   }
+  
 
   ngOnInit(): void {
     this.authService.currentStatus.subscribe(status => this.isAuthenticated = status)
+    this.accountService.getProfile().subscribe((response:any)=>{
+      this.hood = response["hood"]
+
+    })
   }
 
 }

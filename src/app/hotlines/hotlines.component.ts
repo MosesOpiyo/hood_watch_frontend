@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { AccountService } from '../account.service';
 
 @Component({
   selector: 'app-hotlines',
@@ -6,10 +7,13 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./hotlines.component.css']
 })
 export class HotlinesComponent implements OnInit {
-
-  constructor() { }
+hood:any
+  constructor(private accountservice:AccountService) { }
 
   ngOnInit(): void {
+    this.accountservice.getProfile().subscribe((response:any) =>{
+      this.hood = response['hood']
+     })
   }
 
 }

@@ -35,6 +35,9 @@ export class HoodsComponent implements OnInit {
       if(this.hood != null){
         this.route.navigate(['hood'])
       }
+      if(this.hood == null){
+        this.route.navigate(['hoods'])
+      }
     })
 
     

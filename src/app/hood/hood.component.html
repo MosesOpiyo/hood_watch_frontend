@@ -22,26 +22,27 @@
                 <div>
                     <h2 class="clo-lg-5 text-bottom py-5" style="margin-top: 8%;padding-left:40px;color: white;">{{hood['name']}}</h2>
                     <p style="color: white;margin-left: 40px;">Located in {{hood['location']}} created by {{hood['admin']['username']}}</p>
+                    <li class="nav-item" *ngIf="hood">
+                        <button class="btn btn-danger" style="margin-left: 20px;" (click)="moveOut()">Move out</button>
+                    </li>
                 </div>
             </div>
         </section>
         <section style="background-color: #527072;border-radius: 40px;">
             <div class="hoods">
                 <ul class="nav justify-content-center" style="margin-bottom: 20px;">
+
                     <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="#business">Active</a>
+                        <a class="nav-link active" routerLink="/hood">occurence</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link active" href="#occurence">occurence</a>
+                        <a class="nav-link" routerLink="/businesses">Businesses</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Businesses</a>
+                        <a class="nav-link" routerLink="/residents">Residents</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Residents</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Hotlines</a>
+                        <a class="nav-link" routerLink="/hotlines">Hotlines</a>
                     </li>
 
                 </ul>

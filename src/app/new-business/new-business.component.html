@@ -31,19 +31,18 @@
                                 <h2 class="card-title" style="margin-left: 20px;align-items: center;">Add a business</h2>
                             </div>
                             <br>
-                            <form action="">
+                            <form #newBusinessForm="ngForm" (ngSubmit)="createBusiness()">
                                 <label for="" style="color: white;margin-left: 30px; margin-bottom: 20px;">Name of business</label>
                                 <br>
-                                <input type="text" placeholder="name">
+                                <input type="text" name="name" [(ngModel)]="new_business.name" placeholder="name">
                                 <br>
                                 <label for="" style="color: white; margin-left: 30px; margin-bottom: 20px;">Services offered</label>
                                 <br>
-                                <input type="text" placeholder="services">
+                                <input type="text" name="name" [(ngModel)]="new_service.name" placeholder="services">
                                 <br>
                                 <label for="" style="color: white; margin-left: 30px; margin-bottom: 20px;">description</label>
                                 <br>
-                                <input type="text" placeholder="description of service">
-
+                                <input type="text" name="description" [(ngModel)]="new_service.description" placeholder="description of service">
                                 <br>
                                 <button class="btn btn-success" type="submit">Add</button>
                             </form>

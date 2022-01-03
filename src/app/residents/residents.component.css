@@ -7,7 +7,11 @@ body {
     background-image: url(https://github.com/MosesOpiyo/hood_watch_frontend/blob/master/src/assets/images/pexels-francesco-ungaro-4322027.jpg?raw=true);
     background-position: center;
     background-size: cover;
-    height: auto;
+    height: 100vh;
+}
+
+section {
+    height: 40vh
 }
 
 nav {

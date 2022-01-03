@@ -16,7 +16,7 @@
     <section>
         <div class="wording">
             <div>
-                <h2 class="clo-lg-5 text-bottom py-5" style="margin-top: 8%;padding-left:40px;color: white;">Welcome User.See your profile</h2>
+                <h2 class="clo-lg-5 text-bottom py-5" style="margin-top: 8%;padding-left:40px;color: white;">Welcome {{user['username']}}.Have a look<br> at your profile</h2>
             </div>
         </div>
     </section>
@@ -34,22 +34,22 @@
                                 <button class="btn btn-info" style="margin-left: 20px;">Edit Profile</button>
                             </div>
                             <div class="col-lg-5">
-                                <h3 style="margin-top: 70px;color: white;">Name</h3>
+                                <h3 style="margin-top: 70px;color: white;">{{user['username']}}</h3>
                                 <br>
-                                <h3 style="color: white;">Location</h3>
+                                <h3 style="color: white;">{{hood['location']}}</h3>
                             </div>
                         </div>
                         <p class="card-text" style="margin-left: 20px;font-size: 40px;color: white;">Currently in:</p>
                         <div class="card-3">
                             <div class="row g-0">
                                 <div class="col-lg-5">
-                                    <h3>Name</h3>
-                                    <h3>Location</h3>
-                                    <h3>Residents</h3>
+                                    <h3>Name: {{hood['name']}}</h3>
+                                    <h3>Location: {{hood['location']}}</h3>
+
                                 </div>
                                 <div class="col-lg-5">
-                                    <h3>Police hotline</h3>
-                                    <h3>Emergency hotline</h3>
+                                    <h3>Police hotline: {{hood['police_line']}}</h3>
+                                    <h3>Emergency hotline: {{hood['emergency_line']}}</h3>
                                 </div>
                             </div>
 

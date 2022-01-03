@@ -16,7 +16,7 @@ export class LoginComponent implements OnInit {
 
   loginUser(){
     let form = new FormData();
-    form.append('email',this.email),
+    form.append('username',this.email),
     form.append('password',this.password),
     this.accountService.login(form)
   }

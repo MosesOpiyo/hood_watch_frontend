@@ -24,17 +24,18 @@
     <section style="background-color: #527072;border-radius: 40px;">
         <div class="hoods">
             <ul class="nav justify-content-center" style="margin-bottom: 20px;">
+
                 <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="#business">Active</a>
+                    <a class="nav-link active" routerLink="/hood">occurence</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link active" href="#occurence">Link</a>
+                    <a class="nav-link" routerLink="/businesses">Businesses</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Link</a>
+                    <a class="nav-link" routerLink="/residents">Residents</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Link</a>
+                    <a class="nav-link" routerLink="/hotlines">Hotlines</a>
                 </li>
 
             </ul>
@@ -48,7 +49,7 @@
                                 <h2 class="card-title" style="margin-left: 20px;align-items: center;">Businesses</h2>
                             </div>
                             <div class="col-lg-5">
-                                <a href="#" class="btn btn-success" style="margin-left: 20px;">Add business</a>
+                                <a routerLink="/new-business" class="btn btn-success" style="margin-left: 20px;">Add business</a>
                             </div>
                             <div class="row g-0">
                                 <form class="d-flex">
@@ -58,10 +59,10 @@
 
                             </div>
                             <br>
-                            <div class="businesses" style="margin-top: 30px;">
-                                <h5 style="margin-left: 23px;padding-bottom: 20px;padding-top: 20px;">business name</h5>
-                                <h5 style="margin-left: 23px;padding-bottom: 20px;">business owner</h5>
-                                <h5 style="margin-left: 23px;padding-bottom: 20px;">business services</h5>
+                            <div class="businesses" style="margin-top: 30px;" *ngFor="let business of businesses">
+                                <h5 style="margin-left: 23px;padding-bottom: 20px;padding-top: 20px;">{{business.name}}</h5>
+                                <h5 style="margin-left: 23px;padding-bottom: 20px;">{{business.service.name}}</h5>
+                                <h5 style="margin-left: 23px;padding-bottom: 20px;">{{business.service.service_description}}</h5>
                             </div>
                         </div>
                     </div>
