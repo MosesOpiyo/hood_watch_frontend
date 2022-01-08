@@ -21,8 +21,8 @@
             </div>
         </div>
     </section>
-    <section style="background-color: #527072;border-radius: 40px;">
-        <div class="hoods">
+    <section style="background-color: #527072;border-radius: 40px;height: auto;">
+        <div class="hoods" style="height: auto;">
             <ul class="nav justify-content-center" style="margin-bottom: 20px;">
 
                 <li class="nav-item">
@@ -41,9 +41,9 @@
             </ul>
 
 
-            <div role="tabpanel" class="tab-pane" id="business">
-                <div class="card g-0">
-                    <div class="card-body">
+            <div role="tabpanel" class="tab-pane" id="business" style="height: auto;">
+                <div class="card g-0" style="height: auto;">
+                    <div class="card-body" style="height: auto;">
                         <div class="row g-0">
                             <div class="col-lg-5">
                                 <h2 class="card-title" style="margin-left: 20px;align-items: center;">Businesses</h2>
@@ -59,10 +59,15 @@
 
                             </div>
                             <br>
-                            <div class="businesses" style="margin-top: 30px;" *ngFor="let business of businesses">
-                                <h5 style="margin-left: 23px;padding-bottom: 20px;padding-top: 20px;">{{business.name}}</h5>
-                                <h5 style="margin-left: 23px;padding-bottom: 20px;">{{business.service.name}}</h5>
-                                <h5 style="margin-left: 23px;padding-bottom: 20px;">{{business.service.service_description}}</h5>
+
+                            <div class="col" style="height: auto;">
+                                <div class="row g-1" *ngFor="let business of businesses">
+                                    <div class="businesses" style="background-color:#268B6A;border-radius: 20px; margin-bottom: 10px;margin-top: 10px;">
+                                        <h2 style="margin-left: 23px;margin-top: 10px;">Business: {{business.name}}</h2>
+                                        <p style="margin-top: 5px;margin-left: 22px;">Owned by: {{business.owner.username}}</p>
+                                        <p style="margin-top: 5px;margin-left: 22px;">Get in touch: {{business.owner.email}}</p>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>

@@ -15,13 +15,14 @@ export class BusinessComponent implements OnInit {
   ngOnInit(): void {
     this.accountservice.getProfile().subscribe((response:any)=>{
       this.hood = response['hood']
+      this.accountservice.getBusinesses(this.hood.id).subscribe((response:any) =>{
+        this.businesses = response['businesses']
+        console.log(this.businesses)
+       },error => {
+         console.log(error)
+       })
     })
-    this.accountservice.getBusinesses(this.hood.id).subscribe((response:any) =>{
-     this.businesses = response['businesses']
-     console.log(this.businesses)
-    },error => {
-      console.log(error)
-    })
+    
   }
 
 }

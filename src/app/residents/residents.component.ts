@@ -16,11 +16,13 @@ export class ResidentsComponent implements OnInit {
   ngOnInit(): void {
     this.accountService.getProfile().subscribe((response:any) =>{
      this.hood = response['hood']
-    })
-    this.accountService.getResidents(this.hood.id).subscribe((response:any)=>{
+     
+     this.accountService.getResidents(this.hood.id).subscribe((response:any)=>{
       this.residents = response['residents']
       console.log(this.residents)
     })
+    })
+    
   }
 
 }

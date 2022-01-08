@@ -21,7 +21,7 @@
             </div>
         </div>
     </section>
-    <section style="background-color: #527072;border-radius: 40px;">
+    <section style="background-color: #527072;border-radius: 40px;height: auto;">
         <div class="hoods">
             <ul class="nav justify-content-center" style="margin-bottom: 20px;">
 
@@ -42,7 +42,7 @@
 
 
 
-            <div role="tabpanel" class="tab-pane" id="residents">
+            <div role="tabpanel" class="tab-pane" id="residents" style="height: auto;">
                 <div class="card g-0">
                     <div class="card-body">
                         <div class="row g-0">
@@ -51,8 +51,7 @@
                             </div>
                             <br>
                             <div class="Residents" style="margin-top: 30px;" *ngFor="let resident of residents">
-                                <h5 style="margin-left: 23px;padding-bottom: 5px;padding-top: 10px;color: white">{{resident.username}}</h5>
-                                me}}
+                                <h3 style="margin-left: 23px;padding-top: 3px;color: white">{{resident.username}}</h3>
                             </div>
                         </div>
                     </div>

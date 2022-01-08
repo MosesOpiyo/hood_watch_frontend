@@ -30,8 +30,13 @@
                     <div class="card-body">
                         <div class="row">
                             <div class="col-lg-5">
-                                <div class="card-2 g-0"></div>
-                                <button class="btn btn-info" style="margin-left: 20px;">Edit Profile</button>
+                                <div class="card-2 g-0">
+                                    <img src="/src/assets/images/pexels-francesco-ungaro-4322027.jpg" alt="">
+                                </div>
+                                <form #newPicForm="ngForm" (ngSubmit)="profile_pic()">
+                                    <input type="file" [(ngModel)]="new_profile_pic.profile_pic">
+                                    <button type="submit" class="btn btn-info" style="margin-left: 20px;">Edit Profile pic</button>
+                                </form>
                             </div>
                             <div class="col-lg-5">
                                 <h3 style="margin-top: 70px;color: white;">{{user['username']}}</h3>

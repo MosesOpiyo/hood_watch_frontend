@@ -158,6 +158,21 @@ export class AccountService {
       })
      return this.http.get(`${environment.BASE_URL}/hood/search/${searchTerm}`,{"headers":headers})
   }
+  profilePic(pic:any){
+    this.http.post(`${environment.BASE_URL}/hood/profile_pic`,pic).subscribe(response =>{
+      alert("Profile pic was changed successfully!")
+    },error=>{
+      alert("There was a problem changing the picture.")
+      console.log(error)
+    });
+  }
+  getPic(pic:any){
+    let headers = new HttpHeaders({
+      'Authorization':`Token ${sessionStorage.getItem('token')}`
+      })
+    this.http.get(`${environment.BASE_URL}/hood/profile_pic`,pic)
+
+  }
 }
 
   

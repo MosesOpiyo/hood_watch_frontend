@@ -27,6 +27,7 @@ export class HoodComponent implements OnInit {
   }
   moveOut(){
     this.accountservice.moveOut()
+    
   }
 
   constructor(private accountservice:AccountService,private route:Router) { }
@@ -37,15 +38,17 @@ export class HoodComponent implements OnInit {
 
     this.accountservice.getProfile().subscribe((response:any) =>{
      this.hood = response['hood']
-    })
-    
 
-    this.accountservice.getOccurence(this.hood.id).subscribe((response:any) =>{
+     this.accountservice.getOccurence(this.hood.id).subscribe((response:any) =>{
       this.occurences = response
       console.log(this.occurences)
     },error => {
       console.log(error)
     })
+    })
+    
+
+    
 
   
     
