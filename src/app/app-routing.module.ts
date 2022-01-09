@@ -11,6 +11,7 @@ import { BusinessComponent } from './business/business.component';
 import { NewBusinessComponent } from './new-business/new-business.component';
 import { ResidentsComponent } from './residents/residents.component';
 import { HotlinesComponent } from './hotlines/hotlines.component';
+import { BusinessSearchComponent } from './business-search/business-search.component';
 
 const routes: Routes = [
   {path:'',component:LoginComponent},
@@ -22,7 +23,8 @@ const routes: Routes = [
   {path:'new-business',component:NewBusinessComponent},
   {path:'residents',component:ResidentsComponent},
   {path:'profile',component:ProfileComponent},
-  {path:'hotlines',component:HotlinesComponent}
+  {path:'hotlines',component:HotlinesComponent},
+  {path:'search',component:BusinessSearchComponent}
 ];
 
 @NgModule({

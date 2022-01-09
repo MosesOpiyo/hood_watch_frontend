@@ -17,30 +17,14 @@
     <section>
         <div class="wording">
             <div>
-                <h2 class="clo-lg-5 text-bottom py-5" style="margin-top: 8%;padding-left:40px;color: white;">Businesses in your hood</h2>
+                <h2 class="clo-lg-5 text-bottom py-5" style="margin-top: 8%;padding-left:40px;color: white;">Businesses search</h2>
+                <p style="padding-left:40px;color: white;">If no info is displayed,refresh please.</p>
+                <h2 style="margin-left: 40px;" *ngIf="!businesses">No matches found</h2>
             </div>
         </div>
     </section>
     <section style="background-color: #527072;border-radius: 40px;height: auto;">
         <div class="hoods" style="height: auto;">
-            <ul class="nav justify-content-center" style="margin-bottom: 20px;">
-
-                <li class="nav-item">
-                    <a class="nav-link active" routerLink="/hood">occurence</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" routerLink="/businesses">Businesses</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" routerLink="/residents">Residents</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" routerLink="/hotlines">Hotlines</a>
-                </li>
-
-            </ul>
-
-
             <div role="tabpanel" class="tab-pane" id="business" style="height: auto;">
                 <div class="card g-0" style="height: auto;">
                     <div class="card-body" style="height: auto;">
@@ -48,24 +32,17 @@
                             <div class="col-lg-5">
                                 <h2 class="card-title" style="margin-left: 20px;align-items: center;">Businesses</h2>
                             </div>
-                            <div class="col-lg-5">
-                                <a routerLink="/new-business" class="btn btn-success" style="margin-left: 20px;">Add business</a>
-                            </div>
                             <div class="row g-0">
-                                <form class="d-flex" #searchForm="ngForm" (ngSubmit)="search_item()">
-                                    <input class="form-control me-2" type="search" placeholder="Search" name="search" [(ngModel)]="searchTerm" aria-label="Search">
-                                    <button class="btn btn-outline-success" type="submit">Search</button>
-                                </form>
-
                             </div>
                             <br>
 
                             <div class="col" style="height: auto;">
-                                <div class="row g-1" *ngFor="let business of businesses">
-                                    <div class="businesses" style="background-color:#268B6A;border-radius: 20px; margin-bottom: 10px;margin-top: 10px;">
-                                        <h2 style="margin-left: 23px;margin-top: 10px;">Business: {{business.name}}</h2>
+                                <div class="row g-1">
+
+                                    <div class="card" style="background-color:#67B3B8;border-radius: 20px; margin-bottom: 10px;margin-top: 10px;" *ngFor="let business of businesses">
+                                        <h2 style="margin-left: 23px;margin-top: 10px;">Business:{{business.name}} </h2>
                                         <p style="margin-top: 5px;margin-left: 22px;">Owned by: {{business.owner.username}}</p>
-                                        <p style="margin-top: 5px;margin-left: 22px;">Get in touch: {{business.owner.email}}</p>
+                                        <p style="margin-top: 5px;margin-left: 22px;">Get in touch:{{business.owner.email}}</p>
                                     </div>
                                 </div>
                             </div>
@@ -78,7 +55,6 @@
 
         </div>
     </section>
-
 
 
 

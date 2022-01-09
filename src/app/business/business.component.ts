@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { AccountService } from '../account.service';
+import { BusinessServiceService } from '../business-service.service'
 
 @Component({
   selector: 'app-business',
@@ -9,8 +11,14 @@ import { AccountService } from '../account.service';
 export class BusinessComponent implements OnInit {
   hood:any;
   businesses:any
+  searchTerm:any
 
-  constructor(private accountservice:AccountService) { }
+  constructor(private accountservice:AccountService,private businessService:BusinessServiceService,private route:Router) { }
+
+  search_item(){
+    this.route.navigate(['search']);
+    this.businessService.newSearch(this.searchTerm)
+  }
 
   ngOnInit(): void {
     this.accountservice.getProfile().subscribe((response:any)=>{
@@ -21,7 +29,9 @@ export class BusinessComponent implements OnInit {
        },error => {
          console.log(error)
        })
+       
     })
+    this.businessService.current_term.subscribe(term => this.searchTerm = term)
     
   }
 

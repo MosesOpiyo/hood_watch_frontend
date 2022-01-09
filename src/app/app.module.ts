@@ -20,6 +20,7 @@ import { HotlinesComponent } from './hotlines/hotlines.component';
 import { NewBusinessComponent } from './new-business/new-business.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { OccurenceComponent } from './occurence/occurence.component';
+import { BusinessSearchComponent } from './business-search/business-search.component';
 
 @NgModule({
   declarations: [
@@ -35,7 +36,8 @@ import { OccurenceComponent } from './occurence/occurence.component';
     HotlinesComponent,
     NewBusinessComponent,
     NavbarComponent,
-    OccurenceComponent
+    OccurenceComponent,
+    BusinessSearchComponent
   ],
   imports: [
     BrowserModule,
